@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.fields import SlugField, EmailField, IntegerField, CharField, URLField
+from django.forms.fields import RegexField, FilePathField
 
 
 # Create your models here.
