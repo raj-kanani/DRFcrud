@@ -1,5 +1,4 @@
 import io
-
 from rest_framework import views
 from rest_framework.decorators import api_view
 from rest_framework.parsers import JSONParser
@@ -75,13 +74,13 @@ class StudentApi(View):
         return JsonResponse(res, safe=False)
 
 
-# @api_view(['GET', 'POST'])
-# def hello_world(request):
-#     if request.method == 'GET':
-#         # print(request.data)
-#         return Response({'msg': 'this is get data'})
-#
-#     if request.method == 'POST':
-#         print(request.data)
-#         return Response({'msg': 'this is post data'})
+@api_view(['GET', 'POST'])
+def hello_world(request):
+    if request.method == 'GET':
+        # print(request.data)
+        return Response({'msg': 'this is get data'})
+
+    if request.method == 'POST':
+        print(request.data)
+        return Response({'msg': 'this is post data'})
 

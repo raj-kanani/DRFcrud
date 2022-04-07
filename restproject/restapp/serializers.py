@@ -9,13 +9,13 @@ from .models import Student
 #         fields = '__all__'
 
 class StudentSerializer(serializers.ModelSerializer):
-    name = serializers.CharField(read_only=True)  # single field readonly cannot update
+    # name = serializers.CharField(read_only=True)  # single field readonly cannot update
 
     class Meta:
         model = Student
-        fields = '__all__'
+        fields = ['id', 'name', 'roll', 'city']
         # read_only_fields = ['name', 'city']  # multiple field only readonly cannot change
-        extra_kwargs = {'name': {'read_only': True}}  # single field readonly cannot change
+        # extra_kwargs = {'name': {'read_only': True}}  # single field readonly cannot change
 
 
 # # Simple serializer with CRUD

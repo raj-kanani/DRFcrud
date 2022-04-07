@@ -7,14 +7,14 @@ import requests
 # deserialization data json into string convert.
 
 
-url = "http://127.0.0.1:8000/Api/"
+url = "http://127.0.0.1:8000/student/"
 
 
 # # # create student
 
 def add_data():
     data = {
-        'name': 'rohit',
+        'name': 'rutvik',
         'roll': 100,
         'city': 'mumbai'
     }
@@ -46,7 +46,7 @@ get_data()
 
 def update_data():
     data = {
-        'id': 1,
+        'id': 9,
         'name': 'abc',
         'roll': 123,
         'city': 'pune'
@@ -63,7 +63,7 @@ def update_data():
 
 def delete_data():
     data = {
-        'id': 7,
+        'id': 4,
     }
     json_data = json.dumps(data)
     r = requests.delete(url=url, data=json_data)
